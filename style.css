@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+    align-items: center;
+}
+
+.nav-bar{
+    height: 10vh;
+    background-color: peru;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+#play{
+    width: 15vw;
+    height: 7vh;
+    border-radius: 10px;
+    background-color: black;
+    border: none;
+    color: gold;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#restart{
+    width: 15vw;
+    height: 7vh;
+    border-radius: 10px;
+    background-color: black;
+    border: none;
+    color: gold;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    padding: 5% 40%;
+}
+
+.play-ground{
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    max-width: 510px;
+    min-width: 410px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40%;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    background-color: rgb(3, 11, 61);
+    border-radius: 5%;
+    padding-left: 18%;
+}
+
+.main-game {
+    margin-left: -7%;
+    display: grid;
+    grid-template-columns: 100px 100px 100px; 
+    row-gap: 1%;
+    margin-right: 7%;
+}
+
+.main-game p {
+    font-size: 4.5em;
+    color:aqua;
+    font-family: "Varela Round", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.value{
+    border: 5px solid rgba(255, 0, 72, 0.845);
+    display: p;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    padding: 5% 5%;
+    padding-left: 30%;
+    padding-right: 70%;
+}
