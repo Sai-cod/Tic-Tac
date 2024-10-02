@@ -45,6 +45,7 @@ body{
 .parent {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 5% 40%;
 }
 
@@ -69,7 +70,6 @@ body{
     margin-left: -7%;
     display: grid;
     grid-template-columns: 100px 100px 100px; 
-    row-gap: 1%;
     margin-right: 7%;
 }
 
@@ -90,5 +90,29 @@ body{
     margin-right: 40px;
     padding: 5% 5%;
     padding-left: 30%;
+    height: 16vh;
     padding-right: 70%;
+}
+
+.instruction-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Varela Round", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(27, 7, 118);
+    color:rgb(41, 255, 4);
+    font-size: 1.34em;
+    height: 30vh;
+    padding : 0 40%;
+    border: 1px solid black;
+}
+
+.instruction-box p{
+    text-wrap: nowrap;
+}
+
+.draw,.win-para {
+    opacity: 0;
 }
