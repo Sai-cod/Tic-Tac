@@ -2,7 +2,11 @@ console.log('Welcome to Tic Tac Toe');
 
 let counter = 0;
 
+let valuestore = [0,0,0,0,0,0,0,0,0];
+
 document.getElementById('play').addEventListener('click',()=>{
+    counter = 0;
+    document.getElementById('tp').style.opacity = '1';
     Array.from(document.getElementsByClassName('value')).forEach((element)=>{
         element.getElementsByTagName('p')[0].innerHTML = ' ';
     })
@@ -14,6 +18,48 @@ document.getElementById('play').addEventListener('click',()=>{
     }
 })
 
+let index;
 
+let str = 'X';
+
+let checkwin = (arr)=>{
+    let flag = 0;
+    for(let i=0;i<3;i++) {
+        if(arr[i]!=1) 
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 0) {
+        document.getElementsByClassName('win-turn').innerHTML = 'X';
+        document.getElementsByClassName('win-para').style.opacity = '1';
+    }
+}
+
+Array.from(document.getElementsByClassName('value')).forEach((element)=>{
+    element.addEventListener('click',(e)=>{
+        if(counter%2==0) {
+            str = 'X';
+            index = e.target.id;
+            console.log("hi");
+            valuestore[index] = 1;
+            document.getElementsByTagName('p')[index].innerHTML = str;
+            document.getElementsByClassName('playturn').innerHTML = "X's";
+            checkwin(valuestore);
+            counter++;
+        }
+        else {
+            str = 'O';
+            index = e.target.id;
+            console.log("hi");
+            valuestore[index] = 2;
+            document.getElementsByTagName('p')[index].innerHTML = str;
+            document.getElementsByClassName('playturn').innerHTML = "O's";
+            counter++;
+        }
+        
+    })
+})
 
 

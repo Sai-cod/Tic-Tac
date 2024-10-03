@@ -146,6 +146,7 @@ body{
     text-wrap: nowrap;
 }
 
-.draw,.win-para {
+.draw,.win-para,.turn-para{
     opacity: 0;
 }
+
