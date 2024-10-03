@@ -6,6 +6,9 @@ let valuestore = [0,0,0,0,0,0,0,0,0];
 
 document.getElementById('play').addEventListener('click',()=>{
     counter = 0;
+    for(let i=0;i<9;i++) {
+        valuestore[i] = 0;
+    }
     document.getElementById('tp').style.opacity = '1';
     Array.from(document.getElementsByClassName('value')).forEach((element)=>{
         element.getElementsByTagName('p')[0].innerHTML = ' ';
@@ -42,21 +45,32 @@ Array.from(document.getElementsByClassName('value')).forEach((element)=>{
         if(counter%2==0) {
             str = 'X';
             index = e.target.id;
-            console.log("hi");
-            valuestore[index] = 1;
-            document.getElementsByTagName('p')[index].innerHTML = str;
-            document.getElementsByClassName('playturn').innerHTML = "X's";
-            checkwin(valuestore);
-            counter++;
+            if(valuestore[index]==0) {
+                console.log("hi");
+                valuestore[index] = 1;
+                document.getElementsByTagName('p')[index].innerHTML = str;
+                document.getElementsByClassName('playturn').innerHTML = "X's";
+                checkwin(valuestore);
+                counter++;
+            }
+            else {
+                alert('the place is already filled!');
+            }
+            
         }
         else {
             str = 'O';
             index = e.target.id;
-            console.log("hi");
-            valuestore[index] = 2;
-            document.getElementsByTagName('p')[index].innerHTML = str;
-            document.getElementsByClassName('playturn').innerHTML = "O's";
-            counter++;
+            if(valuestore[index]==0) {
+                console.log("hi");
+                valuestore[index] = 2;
+                document.getElementsByTagName('p')[index].innerHTML = str;
+                document.getElementsByClassName('playturn').innerHTML = "O's";
+                counter++;
+            }
+            else {
+                alert('the place is already filled!');
+            }
         }
         
     })
